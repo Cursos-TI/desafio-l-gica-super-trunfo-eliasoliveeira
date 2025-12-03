@@ -39,5 +39,91 @@ int main() {
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
+      // Área para definição das variáveis para armazenar as propriedades das cidades
+  char estado1[15];
+  char codigoDaCarta1[4];
+  char nomeDaCidade1[20];
+  int populacao1;
+  float area1;
+  float pib1;
+  int pontosTur1;
+  float densidadePopulacional1;
+  float pibPerCapita1;
+
+    char estado2[15];
+  char codigoDaCarta2[4];
+  char nomeDaCidade2[20];
+  int populacao2;
+  float area2;
+  float pib2;
+  int pontosTur2;
+  float densidadePopulacional2;
+  float pibPerCapita2;
+
+
+  // Área para entrada de dados
+  printf("Digite o estado: ");
+  scanf("%s", &estado1);
+
+  printf("\nDigite o código da carta: ");
+  scanf("%s", &codigoDaCarta1);
+
+  printf("\nDigite o nome da cidade: ");
+  scanf("%s", &nomeDaCidade1);
+
+  printf("\nDigite a população: ");
+  scanf("%d", &populacao1);
+
+  printf("\nDigite a area: ");
+  scanf("%f", &area1);
+
+  printf("\nDigite o PIB: ");
+  scanf("%f", &pib1);
+
+  printf("\nDigite o número de pontos turísticos: ");
+  scanf("%d", &pontosTur1);
+
+  densidadePopulacional1 = populacao1/area1;
+  pibPerCapita1 = pib1/populacao1;
+
+  // Área para exibição dos dados da cidade
+  printf("Carta 1:\nEstado: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos turísticos: %d\nDensidade populacional: %.2f\nPIB per capita: %.2f", estado1, codigoDaCarta1, nomeDaCidade1, populacao1, area1, pib1, pontosTur1, densidadePopulacional1, pibPerCapita1);
+
+  // Área para entrada de dados
+  printf("\nDigite o estado: ");
+  scanf("%s", &estado2);
+
+  printf("\nDigite o código da carta: ");
+  scanf("%s", &codigoDaCarta2);
+
+  printf("\nDigite o nome da cidade: ");
+  scanf("%s", &nomeDaCidade2);
+
+  printf("\nDigite a população: ");
+  scanf("%d", &populacao2);
+
+  printf("\nDigite a area: ");
+  scanf("%f", &area2);
+
+  printf("\nDigite o PIB: ");
+  scanf("%f", &pib2);
+
+  printf("\nDigite o número de pontos turísticos: ");
+  scanf("%d", &pontosTur2);
+
+  densidadePopulacional2 = populacao2/area2;
+  pibPerCapita2 = pib2/populacao2;
+
+  // Área para exibição dos dados da cidade
+  printf("\nCarta 2:\nEstado: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos turísticos: %d\nDensidade populacional: %.2f\nPIB per capita: %.2f\n", estado2, codigoDaCarta2, nomeDaCidade2, populacao2, area2, pib2, pontosTur2, densidadePopulacional2, pibPerCapita2);
+
+  if(populacao1 > populacao2){
+
+      printf("\nComparação de cartas (Atributo: População):\n\nCarta 1 - %s: %d\nCarta 2 - %s: %d\nResultado: Carta 1 %s venceu!", nomeDaCidade1, populacao1, nomeDaCidade2, populacao2, nomeDaCidade1);
+  } else{
+          printf("\nComparação de cartas (Atributo: População):\n\nCarta 1 - %s: %d\nCarta 2 - %s: %d\nResultado: Carta 2 %s venceu!", nomeDaCidade1, populacao1, nomeDaCidade2, populacao2, nomeDaCidade2);
+  }
+
+
     return 0;
 }
